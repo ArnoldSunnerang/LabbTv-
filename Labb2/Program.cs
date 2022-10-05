@@ -23,8 +23,6 @@ ShowShapes();
 
 
 
-
-
 void SpawnShapes()
 {
     for (int i = 0; i < randomShapes.Length; i++)
