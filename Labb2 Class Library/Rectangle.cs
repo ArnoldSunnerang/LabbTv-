@@ -18,14 +18,14 @@ namespace Labb2_Class_Library
         {
             get
             {
-                return width * height;
+                return Math.Abs(width * height);
             }
         }
         public override float Circumference
         {
             get
             {
-                return (height * 2) + (width * 2);
+                return Math.Abs((height * 2) + (width * 2));
             }
         }
 

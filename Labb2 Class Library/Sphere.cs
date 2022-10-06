@@ -15,7 +15,7 @@ namespace Labb2_Class_Library
         {
             get
             {
-                return ((float)(((float)1/3) + 1) * (float)Math.PI) * (radius * radius * radius); 
+                return Math.Abs((((float)1/3) + 1) * ((float)Math.PI) * (radius * radius * radius)); 
             }
         }
         public override Vector3 Center
@@ -29,7 +29,7 @@ namespace Labb2_Class_Library
         {
             get
             {
-                return 4 * (float)Math.PI * (radius * radius);
+                return Math.Abs(4 * (float)Math.PI * (radius * radius));
             }
         }
 

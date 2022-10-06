@@ -15,7 +15,7 @@ namespace Labb2_Class_Library
         {
             get
             {
-                return 2 * (float)Math.PI * radius;
+                return Math.Abs(2 * (float)Math.PI * radius);
             }
         }
         public override float Area

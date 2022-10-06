@@ -20,7 +20,7 @@ namespace Labb2_Class_Library
                 float xy = width * height;
                 float xz = width * depth;
                 float yz = height * depth;
-                return (xy + xz + yz) * 2;
+                return Math.Abs((xy + xz + yz) * 2);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Labb2_Class_Library
         {
             get
             {
-                return height * width * depth;
+                return Math.Abs(height * width * depth);
             }
         }
 

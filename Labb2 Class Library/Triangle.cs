@@ -19,8 +19,9 @@ namespace Labb2_Class_Library
         {
             get
             {
-                float a = (p1.X * (p2.Y - p3.Y)) + (p2.X * (p3.Y - p1.Y)) + (p3.X * (p1.Y - p2.Y)) / 2;
-                return Math.Abs(a);
+                float area = Math.Abs((p1.X * (p2.Y - p3.Y)) + (p2.X * (p3.Y - p1.Y)) + (p3.X * (p1.Y - p2.Y))) / 2;
+                
+                return area;
             }
         }
         public override float Circumference
@@ -40,6 +41,7 @@ namespace Labb2_Class_Library
             get
             {
                 Vector3 c = new Vector3(centroid, (float)0);
+                
                 return c;
             }
         }
