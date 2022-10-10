@@ -12,8 +12,8 @@ namespace Labb2_Class_Library
         private static Vector2 RandomVector2()
             {
                 Random rnd = new Random();
-                float randomX = (float)rnd.Next();
-                float randomY = (float)rnd.Next();
+                float randomX = (float)rnd.Next(0,100);
+                float randomY = (float)rnd.Next(0,100);
 
                 Vector2 outVector = new Vector2(randomX, randomY);
                 return outVector;
@@ -21,9 +21,9 @@ namespace Labb2_Class_Library
         private static Vector3 RandomVector3()
                 {
                     Random rnd = new Random();
-                    float randomX = (float)rnd.Next();
-                    float randomY = (float)rnd.Next();
-                    float randomZ = (float)rnd.Next();
+                    float randomX = (float)rnd.Next(0,100);
+                    float randomY = (float)rnd.Next(0,100);
+                    float randomZ = (float)rnd.Next(0,100);
 
                     Vector3 outVector = new Vector3(randomX, randomY, randomZ);
                     return outVector;
@@ -62,8 +62,13 @@ namespace Labb2_Class_Library
             }
             else if (randomShape == 3)
             {
-                Triangle triangle = new Triangle(RandomVector2(), RandomVector2(), RandomVector2());
+                Vector2 p1 = RandomVector2();
+                Vector2 p2 = RandomVector2();
+                Vector2 p3 = new((center2D.X * 3) - (p1.X + p2.X), (center2D.Y * 3) - (p1.Y + p2.Y));
+
+                Triangle triangle = new Triangle(p1, p2, p3);
                 return triangle;
+
             }
             else if (randomShape == 4)
             {
