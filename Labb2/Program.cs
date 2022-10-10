@@ -22,7 +22,39 @@ ShowShapes();
 
 
 
+void ShowShapes()
+{
+    for (int i = 0; i < randomShapes.Length; i++)
+    {
+        Console.WriteLine(randomShapes[i].ToString());
+        Console.WriteLine();
+    }
 
+    Console.WriteLine(MostCommon(shapeCounter));
+
+    Console.WriteLine(MeanArea(sumArea, randomShapes.Length));
+
+
+    if (sumTrianglePerimeters != 0)
+    {
+        Console.WriteLine($"The sum of all triangular perimeters is {sumTrianglePerimeters}.");
+
+    }
+    else
+    {
+        Console.WriteLine("There are no triangles in the array.");
+    }
+
+    if (largest3DShape.Volume != 0)
+    {
+        Console.WriteLine($"The 3D shape with the most volume is {largest3DShape}.");
+
+    }
+    else
+    {
+        Console.WriteLine("There are no 3D shapes in the array.");
+    }
+}
 
 void SpawnShapes()
 {
@@ -97,47 +129,6 @@ void SeeShapes(Shape[] shapes)
     }
 }
 
-void ShowShapes()
-{
-    for (int i = 0; i < randomShapes.Length; i++)
-    {
-        Console.WriteLine(randomShapes[i].ToString());
-        Console.WriteLine();
-    }
-
-    Console.WriteLine(MostCommon(shapeCounter));
-
-    Console.WriteLine(MeanArea(sumArea, randomShapes.Length));
-
-
-    if (sumTrianglePerimeters != 0)
-    {
-        Console.WriteLine($"The sum of all triangular perimeters is {sumTrianglePerimeters}.");
-
-    }
-    else
-    {
-        Console.WriteLine("There are no triangles in the array.");
-    }
-
-    if (largest3DShape.Volume != 0)
-    {
-        Console.WriteLine($"The 3D shape with the most volume is {largest3DShape}.");
-
-    }
-    else
-    {
-        Console.WriteLine("There are no 3D shapes in the array.");
-    }
-}
-        
-        
-        
-        
-        
-
-
-
 string MostCommon(int[] arr)
 {
     string[] shapeNames = new string[] { "circles", "rectangles", "squares", "triangles", "cuboids", "cubes", "spheres"};
@@ -162,6 +153,16 @@ string MeanArea(float sum, int summands)
     float mean = sum / (float)summands;
     return $"The mean area of all shapes in the array is {mean}.";
 }
+
+        
+        
+        
+        
+        
+
+
+
+
 
 
 
